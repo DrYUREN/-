@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+*.egg
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# PyInstaller
+build/
+*.spec.bak
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Project specific
+logs/
+captures/
+recordings/
+get-pip.py
+
+# Large model files (optional — uncomment to exclude)
+# models/*.pt
+
+# Temp
+*.tmp
+*.log

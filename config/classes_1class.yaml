@@ -1,0 +1,22 @@
+# 胃镜精灵 - 息肉检测配置（匹配 trained model）
+
+classes:
+  0:
+    name_cn: "息肉"
+    name_en: "Polyp"
+    group: "polyp"
+    color: [255, 255, 0]
+    severity: 1
+
+groups:
+  normal:
+    name_cn: "正常组织"
+    color: [0, 255, 0]
+  polyp:
+    name_cn: "息肉/增生"
+    color: [255, 255, 0]
+
+font:
+  face: "C:/Windows/Fonts/simhei.ttf"
+  scale: 0.6
+  thickness: 2

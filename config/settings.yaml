@@ -1,0 +1,53 @@
+# 胃镜精灵 - 主配置文件
+
+capture:
+  preferred_device_index: 0
+  preferred_device_name: "HDMI"
+  target_width: 1920
+  target_height: 1080
+  target_fps: 30
+  api_preference: "CAP_DSHOW"
+
+# 视频文件输入配置
+video_file:
+  loop_playback: true
+  target_fps: 30
+
+detection:
+  model_path: "models/best.pt"
+  confidence_threshold: 0.5
+  iou_threshold: 0.45
+  device: "cpu"
+  half_precision: false
+  max_image_size: 1280
+
+# 图像预处理（参考 Endoscope-Object-Detection 增强策略）
+preprocessing:
+  clahe:
+    enabled: false
+    clip_limit: 2.0
+    tile_grid_size: [8, 8]
+
+inference:
+  warmup_iterations: 3
+  frame_skip_mode: "latest"
+
+# 后处理
+postprocessing:
+  nms:
+    iou_threshold: 0.5
+  soft_nms:
+    enabled: false
+    sigma: 0.5
+
+ui:
+  window_title: "胃镜精灵 - 胃镜图像实时识别系统"
+  default_window_size: [1600, 900]
+  show_fps: true
+  show_confidence: true
+  auto_screenshot_on_detection: false
+
+recording:
+  codec: "mp4v"
+  output_dir: "recordings"
+  fps: 30

@@ -1,0 +1,96 @@
+# 胃镜精灵 - 病变类别配置
+# 详细12类 + 简化3类分组（参考 Endoscope-Object-Detection）
+
+classes:
+  0:
+    name_cn: "正常"
+    name_en: "Normal"
+    group: "normal"
+    color: [0, 255, 0]
+    severity: 0
+  1:
+    name_cn: "早期胃癌"
+    name_en: "Early Gastric Cancer"
+    group: "cancer"
+    color: [255, 0, 0]
+    severity: 3
+  2:
+    name_cn: "进展期胃癌"
+    name_en: "Advanced Gastric Cancer"
+    group: "cancer"
+    color: [128, 0, 0]
+    severity: 3
+  3:
+    name_cn: "息肉"
+    name_en: "Polyp"
+    group: "polyp"
+    color: [255, 255, 0]
+    severity: 1
+  4:
+    name_cn: "溃疡"
+    name_en: "Ulcer"
+    group: "ulcer"
+    color: [255, 165, 0]
+    severity: 2
+  5:
+    name_cn: "糜烂"
+    name_en: "Erosion"
+    group: "ulcer"
+    color: [255, 192, 203]
+    severity: 2
+  6:
+    name_cn: "出血"
+    name_en: "Bleeding"
+    group: "ulcer"
+    color: [0, 0, 255]
+    severity: 2
+  7:
+    name_cn: "Barrett食管"
+    name_en: "Barrett's Esophagus"
+    group: "polyp"
+    color: [128, 0, 128]
+    severity: 1
+  8:
+    name_cn: "食管静脉曲张"
+    name_en: "Esophageal Varices"
+    group: "polyp"
+    color: [0, 128, 128]
+    severity: 2
+  9:
+    name_cn: "胃炎"
+    name_en: "Gastritis"
+    group: "normal"
+    color: [0, 255, 255]
+    severity: 0
+  10:
+    name_cn: "萎缩性胃炎"
+    name_en: "Atrophic Gastritis"
+    group: "normal"
+    color: [255, 0, 255]
+    severity: 0
+  11:
+    name_cn: "黏膜下肿瘤"
+    name_en: "Submucosal Tumor"
+    group: "cancer"
+    color: [139, 69, 19]
+    severity: 3
+
+# 简化3类显示（用于病灶概览面板）
+groups:
+  normal:
+    name_cn: "正常组织"
+    color: [0, 255, 0]
+  ulcer:
+    name_cn: "溃疡类病变"
+    color: [255, 165, 0]
+  polyp:
+    name_cn: "息肉/增生"
+    color: [255, 255, 0]
+  cancer:
+    name_cn: "恶性肿瘤"
+    color: [255, 0, 0]
+
+font:
+  face: "C:/Windows/Fonts/simhei.ttf"
+  scale: 0.6
+  thickness: 2
